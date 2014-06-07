@@ -15,6 +15,8 @@ public:
     uint8_t month() const       { return m; }
     uint8_t day() const         { return d; }
     uint8_t hour() const        { return hh; }
+    uint8_t hour12() const      { return (hh%12!=0)?(hh%12):12; }
+    bool amPm() const           { return hh<12; }
     uint8_t minute() const      { return mm; }
     uint8_t second() const      { return ss; }
     uint8_t dayOfWeek() const;
